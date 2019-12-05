@@ -1,7 +1,8 @@
 require("dotenv").config;
 const { ApolloServer, gql } = require("apollo-server");
 
-const PORT = process.env.PORT || 2000;
+const PORT = process.env.PORT || 9000;
+
 const typeDefs = gql`
   type Book {
     title: String
