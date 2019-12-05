@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const { resolvers, typeDefs } = require("./containers");
 
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 2000;
 const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/buyfeed";
 
 const server = new ApolloServer({
