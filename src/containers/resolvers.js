@@ -5,6 +5,18 @@ const resolvers = {
     users: async () => {
       let users = await UserModel.find();
       return users;
+    },
+    checkIfNumberExits: async (_, { number }) => {
+      const user = await UserModel.findOne({ number });
+      if (user) {
+        return { exist: true };
+      } else {
+        return { exist: false };
+      }
+    },
+    getUserByNumber: async (_, { number }) => {
+      const user = await UserModel.findOne({ number });
+      return user;
     }
   },
   Mutation: {
